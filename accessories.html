@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McHenry Gaming Store | Accessories</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/accessories.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="logo-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo.png" alt="Logo" class="logo-img">
+            </a>
+            <div class="store-name">MCHENRY GAMING STORE</div>
+        </div>
+        
+        <div class="nav-center">
+            <div class="search-container">
+                <input type="text" placeholder="Search home..." id="search-input">
+                <button type="button" id="search-button" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            
+            <ul class="nav-links" id="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+                <li><a href="consoles.html">Consoles</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+        
+        <div class="nav-actions">
+            <a href="cart.html" class="cart" aria-label="Shopping cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Accessories Header -->
+    <header class="accessories-header">
+        <div class="header-content">
+            <h1>Premium Gaming Accessories</h1>
+            <p>Enhance your gaming experience with our high-quality accessories</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Accessories Filter -->
+            <section class="accessories-filter">
+                <div class="filter-group">
+                    <h2>Category</h2>
+                    <div class="category-filter">
+                        <button class="filter-btn active" data-category="all">All</button>
+                        <button class="filter-btn" data-category="controllers">Controllers</button>
+                        <button class="filter-btn" data-category="headsets">Headsets</button>
+                        <button class="filter-btn" data-category="keyboards">Keyboards</button>
+                        <button class="filter-btn" data-category="mice">Mouse</button>
+                        <button class="filter-btn" data-category="chairs">Chairs</button>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h2>Compatibility</h2>
+                    <div class="compatibility-filter">
+                        <button class="filter-btn active" data-platform="all">All Platforms</button>
+                        <button class="filter-btn" data-platform="pc">PC</button>
+                        <button class="filter-btn" data-platform="ps5">PS5</button>
+                        <button class="filter-btn" data-platform="xbox">Xbox</button>
+                        <button class="filter-btn" data-platform="switch">Switch</button>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h2>Price Range</h2>
+                    <input type="range" min="0" max="500" value="500" class="price-range" id="priceRange" aria-label="Price range filter">
+                    <div class="price-values">
+                        <span>£0</span>
+                        <span>£500+</span>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Accessories Grid -->
+            <section class="accessories-grid">
+                <!-- Accessory 1 -->
+                <article class="accessory-card" data-category="controllers" data-platform="ps5,xbox,pc,switch" data-price="59.99">
+                    <div class="card-image">
+                        <img src="images/Controller.webp" alt="Wireless Controller" loading="lazy">
+                        <span class="card-badge">Best Seller</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Wireless Controller</h3>
+                        <div class="compatibility">
+                            <span class="platform-tag pc">PC</span>
+                            <span class="platform-tag ps5">PS5</span>
+                            <span class="platform-tag xbox">Xbox</span>
+                        </div>
+                        <div class="price">
+                            <span class="current-price">£59.99</span>
+                            <span class="original-price">£79.99</span>
+                            <span class="discount">25% off</span>
+                        </div>
+                        <button class="add-to-cart" aria-label="Add Wireless Controller to cart">Add to Cart</button>
+                    </div>
+                </article>
+                
+                <!-- Accessory 2 -->
+                <article class="accessory-card" data-category="headsets" data-platform="pc,ps5,xbox" data-price="119.99">
+                    <div class="card-image">
+                        <img src="images/head.webp" alt="Wireless Gaming Headset" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3>Wireless Gaming Headset</h3>
+                        <div class="compatibility">
+                            <span class="platform-tag pc">PC</span>
+                            <span class="platform-tag ps5">PS5</span>
+                        </div>
+                        <div class="price">
+                            <span class="current-price">£119.99</span>
+                        </div>
+                        <button class="add-to-cart" aria-label="Add Wireless Gaming Headset to cart">Add to Cart</button>
+                    </div>
+                </article>
+                
+                <!-- Accessory 3 -->
+                <article class="accessory-card" data-category="keyboards" data-platform="pc" data-price="69.99">
+                    <div class="card-image">
+                        <img src="images/Keyboard.webp" alt="Gaming Keyboard" loading="lazy">
+                        <span class="card-badge">New</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Gaming Keyboard</h3>
+                        <div class="compatibility">
+                            <span class="platform-tag pc">PC</span>
+                        </div>
+                        <div class="price">
+                            <span class="current-price">£69.99</span>
+                        </div>
+                        <button class="add-to-cart" aria-label="Add Gaming Keyboard to cart">Add to Cart</button>
+                    </div>
+                </article>
+                
+                <!-- Accessory 4 -->
+                <article class="accessory-card" data-category="mice" data-platform="pc" data-price="39.99">
+                    <div class="card-image">
+                        <img src="images/mouse.webp" alt="SKD Gaming Mouse" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3>SKD Gaming Mouse</h3>
+                        <div class="compatibility">
+                            <span class="platform-tag pc">PC</span>
+                        </div>
+                        <div class="price">
+                            <span class="current-price">£39.99</span>
+                            <span class="original-price">£49.99</span>
+                        </div>
+                        <button class="add-to-cart" aria-label="Add SKD Gaming Mouse to cart">Add to Cart</button>
+                    </div>
+                </article>
+                
+                <!-- Accessory 5 -->
+                <article class="accessory-card" data-category="chairs" data-platform="all" data-price="249.99">
+                    <div class="card-image">
+                        <img src="images/gamingchair.webp" alt="Star Gaming Chair" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3>Star Gaming Chair</h3>
+                        <div class="compatibility">
+                            <span class="platform-tag all">Universal</span>
+                        </div>
+                        <div class="price">
+                            <span class="current-price">£249.99</span>
+                        </div>
+                        <button class="add-to-cart" aria-label="Add Star Gaming Chair to cart">Add to Cart</button>
+                    </div>
+                </article>
+                
+                <!-- Accessory 6 -->
+                <article class="accessory-card" data-category="Microphones" data-platform="switch" data-price="239.99">
+                    <div class="card-image">
+                        <img src="images/usbmic.webp" alt="USB Microphone" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3>USB Microphone</h3>
+                        <div class="compatibility">
+                            <span class="platform-tag pc">PC</span>
+                        </div>
+                        <div class="price">
+                            <span class="current-price">£239.99</span>
+                        </div>
+                        <button class="add-to-cart" aria-label="Add USB Microphone to cart">Add to Cart</button>
+                    </div>
+                </article>
+            </section>
+        </div>
+        
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Subscribe for new accessory releases and exclusive offers</p>
+                <form class="newsletter-form">
+                    <label for="newsletter-email" class="sr-only">Email Address</label>
+                    <input type="email" id="newsletter-email" name="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+<!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column footer-logo">
+                <img src="images/logo.png" alt="Logo">
+                <p>Your premier destination for gaming gear, consoles, and accessories.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4 class="footer-heading">Shop</h4>
+                <ul class="footer-links">
+                    <li><a href="games.html">All Games</a></li>
+                    <li><a href="accessories.html">Accessories</a></li>
+                    <li><a href="consoles.html">Gaming Consoles</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4 class="footer-heading">Contact Info</h4>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Gaming Street, Brighton</li>
+                    <li><i class="fas fa-phone-alt"></i> (+44) 021-7890</li>
+                    <li><i class="fas fa-envelope"></i> support@mcgaming.com</li>
+                    <li><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> McHenry Gaming Store. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#top" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McHenry Gaming Store | Reviews</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/reviews.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="logo-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo.png" alt="McHenry Gaming Logo" class="logo-img">
+            </a>
+            <div class="store-name">MCHENRY GAMING STORE</div>
+        </div>
+        
+        <div class="nav-center">
+            <div class="search-container">
+                <input type="text" placeholder="Search reviews..." id="search-input">
+                <button type="button" id="search-button" aria-label="Search reviews">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            
+            <ul class="nav-links" id="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                 <li><a href="accessories.html">Accessories</a></li>
+                <li><a href="consoles.html">Consoles</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+        
+        <div class="nav-actions">
+            <a href="cart.html" class="cart" aria-label="Shopping cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Reviews Header -->
+    <header class="reviews-header">
+        <div class="header-content">
+            <h1>Customer Reviews</h1>
+            <p>See what our customers are saying about our products and services</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="reviews-main">
+        <div class="container">
+            <!-- Review Filters -->
+            <section class="review-filters">
+                <div class="filter-group">
+                    <h2>Filter Reviews</h2>
+                    <div class="filter-options">
+                        <div class="filter-category">
+                            <label for="rating-filter">Rating:</label>
+                            <select id="rating-filter" class="filter-select">
+                                <option value="all">All Ratings</option>
+                                <option value="5">5 Stars</option>
+                                <option value="4">4 Stars</option>
+                                <option value="3">3 Stars</option>
+                                <option value="2">2 Stars</option>
+                                <option value="1">1 Star</option>
+                            </select>
+                        </div>
+                        <div class="filter-category">
+                            <label for="product-filter">Product Type:</label>
+                            <select id="product-filter" class="filter-select">
+                                <option value="all">All Products</option>
+                                <option value="games">Games</option>
+                                <option value="consoles">Consoles</option>
+                                <option value="hardware">PC Hardware</option>
+                                <option value="accessories">Accessories</option>
+                            </select>
+                        </div>
+                        <button id="reset-filters" class="filter-reset">Reset Filters</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reviews Grid -->
+            <section class="reviews-grid">
+                <!-- Review 1 -->
+                <article class="review-card" data-rating="5" data-product="consoles">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <img src="images/alex.jpg" alt="Alex Rodri" class="reviewer-avatar">
+                            <div class="reviewer-details">
+                                <h3>Alex Rodri</h3>
+                                <p class="review-date">Posted on: 15 May 2024</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <div class="stars" aria-label="5 out of 5 stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="verified-purchase">Verified Purchase</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <h4>PlayStation 5</h4>
+                        <p>The PS5 has completely changed my gaming experience. The load times are incredibly fast and the graphics are stunning. The DualSense controller's haptic feedback adds a whole new level of immersion.</p>
+                    </div>
+                </article>
+
+                <!-- Review 2 -->
+                <article class="review-card" data-rating="4" data-product="games">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <img src="images/david.jpg" alt="David Miller" class="reviewer-avatar">
+                            <div class="reviewer-details">
+                                <h3>David Miller</h3>
+                                <p class="review-date">Posted on: 22 April 2024</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <div class="stars" aria-label="4 out of 5 stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <h4>The Legend of Zelda: Tears of the Kingdom</h4>
+                        <p>An amazing game with incredible world-building. The physics system is mind-blowing, though I did experience some frame rate drops in busy areas. Overall, a must-play for Switch owners!</p>
+                    </div>
+                </article>
+
+                <!-- Review 3 -->
+                <article class="review-card" data-rating="5" data-product="hardware">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <img src="images/adam.webp" alt="Adama Ward" class="reviewer-avatar">
+                            <div class="reviewer-details">
+                                <h3>Adama Ward</h3>
+                                <p class="review-date">Posted on: 10 March 2023</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <div class="stars" aria-label="5 out of 5 stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="verified-purchase">Verified Purchase</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <h4>HUIDO TX 5090</h4>
+                        <p>This GPU is an absolute beast! Handles 4K gaming with ease and stays surprisingly cool. The DLSS 3.0 technology is game-changing. Worth every penny for serious gamers.</p>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Review Form -->
+            <section class="review-form-section">
+                <h2>Write a Review</h2>
+                <form id="review-form" class="review-form">
+                    <div class="form-group">
+                        <label for="reviewer-name">Your Name:</label>
+                        <input type="text" id="reviewer-name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="review-product">Product Reviewed:</label>
+                        <input type="text" id="review-product" name="product" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="review-rating">Rating:</label>
+                        <div class="star-rating">
+                            <input type="radio" id="star5" name="rating" value="5">
+                            <label for="star5" title="5 stars"></label>
+                            <input type="radio" id="star4" name="rating" value="4">
+                            <label for="star4" title="4 stars"></label>
+                            <input type="radio" id="star3" name="rating" value="3">
+                            <label for="star3" title="3 stars"></label>
+                            <input type="radio" id="star2" name="rating" value="2">
+                            <label for="star2" title="2 stars"></label>
+                            <input type="radio" id="star1" name="rating" value="1">
+                            <label for="star1" title="1 star"></label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="review-text">Your Review:</label>
+                        <textarea id="review-text" name="review" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="verified-purchase" name="verified">
+                        <label for="verified-purchase">I made a verified purchase</label>
+                    </div>
+                    <button type="submit" class="submit-review">Submit Review</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h3>Stay Updated</h3>
+            <p>Subscribe for the latest reviews, product news, and exclusive offers.</p>
+            <form class="newsletter-form">
+                <label for="newsletter-email" class="sr-only">Email Address</label>
+                <input type="email" id="newsletter-email" name="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column footer-logo">
+                <img src="images/logo.png" alt="Logo">
+                <p>Your premier destination for gaming gear, consoles, and accessories.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4 class="footer-heading">Shop</h4>
+                <ul class="footer-links">
+                    <li><a href="games.html">All Games</a></li>
+                    <li><a href="accessories.html">Accessories</a></li>
+                    <li><a href="consoles.html">Gaming Consoles</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4 class="footer-heading">Contact Info</h4>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Gaming Street, Brighton</li>
+                    <li><i class="fas fa-phone-alt"></i> (+44) 021-7890</li>
+                    <li><i class="fas fa-envelope"></i> support@mcgaming.com</li>
+                    <li><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> McHenry Gaming Store. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#top" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

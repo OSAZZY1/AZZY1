@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McHenry Gaming Store | Register</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body id="top">
+    <!-- Navigation -->
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="logo-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo.png" alt="McHenry Gaming Logo" class="logo-img">
+            </a>
+            <div class="store-name">MCHENRY GAMING STORE</div>
+        </div>
+        
+        <div class="nav-center">
+            <div class="search-container">
+                <input type="text" placeholder="Search register..." id="search-input">
+                <button type="button" id="search-button" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            
+            <ul class="nav-links" id="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                 <li><a href="accessories.html">Accessories</a></li>
+                <li><a href="consoles.html">Consoles</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+        
+        <div class="nav-actions">
+            <a href="cart.html" class="cart" aria-label="Shopping cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Registration Header -->
+    <section class="register-header">
+        <div class="container">
+            <h1>Create Your Account</h1>
+            <p>Join McHenry Gaming to access exclusive deals and faster checkout</p>
+        </div>
+    </section>
+
+    <!-- Registration Form -->
+    <main class="register-main">
+        <div class="container">
+            <form id="registration-form" class="registration-form">
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" required autocomplete="given-name">
+                    <div class="error-message" id="first-name-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" required autocomplete="family-name">
+                    <div class="error-message" id="last-name-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required autocomplete="email">
+                    <div class="error-message" id="email-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-input">
+                        <input type="password" id="password" name="password" required autocomplete="new-password">
+                        <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="password-requirements">
+                        <p>Password must contain:</p>
+                        <ul>
+                            <li id="req-length">At least 8 characters</li>
+                            <li id="req-uppercase">1 uppercase letter</li>
+                            <li id="req-number">1 number</li>
+                            <li id="req-special">1 special character</li>
+                        </ul>
+                    </div>
+                    <div class="error-message" id="password-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <div class="password-input">
+                        <input type="password" id="confirm-password" name="confirm-password" required autocomplete="new-password">
+                        <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="error-message" id="confirm-password-error"></div>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <label for="terms">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>
+                    </label>
+                    <div class="error-message" id="terms-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="register-btn">Create Account</button>
+                </div>
+                
+                <div class="login-redirect">
+                    <p>Already have an account? <a href="login.html">Log in here</a></p>
+                </div>
+            </form>
+        </div>
+    </main>
+
+   <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column footer-logo">
+                <img src="images/logo.png" alt="Logo">
+                <p>Your premier destination for gaming gear, consoles, and accessories.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4 class="footer-heading">Shop</h4>
+                <ul class="footer-links">
+                    <li><a href="games.html">All Games</a></li>
+                    <li><a href="accessories.html">Accessories</a></li>
+                    <li><a href="consoles.html">Gaming Consoles</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4 class="footer-heading">Contact Info</h4>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Gaming Street, Brighton</li>
+                    <li><i class="fas fa-phone-alt"></i> (+44) 021-7890</li>
+                    <li><i class="fas fa-envelope"></i> support@mcgaming.com</li>
+                    <li><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> McHenry Gaming Store. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#top" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

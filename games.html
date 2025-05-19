@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McHenry Gaming Store | Games</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="games.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="logo-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo.png" alt="Logo" class="logo-img">
+            </a>
+            <div class="store-name">MCHENRY GAMING STORE</div>
+        </div>
+        
+        <div class="nav-center">
+            <div class="search-container">
+                <input type="text" placeholder="Search games..." id="search-input">
+                <button type="button" id="search-button" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            
+            <ul class="nav-links" id="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                 <li><a href="accessories.html">Accessories</a></li>
+                <li><a href="consoles.html">Consoles</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+        
+        <div class="nav-actions">
+            <a href="cart.html" class="cart" aria-label="Shopping cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    <!-- Games Header -->
+    <section class="games-header">
+        <h1>Explore Our Game Collection</h1>
+        <p>Find the perfect game for your platform - new releases, classics, and exclusive titles</p>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Games Filter -->
+            <section class="games-filter">
+                <div class="filter-group">
+                    <h3>Platform</h3>
+                    <div class="platform-filter">
+                        <button class="filter-btn active" data-platform="all">All</button>
+                        <button class="filter-btn" data-platform="ps5"><img src="images/pslogo.webp" alt="PS5" class="platform-icon"> PS5</button>
+                        <button class="filter-btn" data-platform="xbox"><img src="images/xboxlogo.png" alt="Xbox" class="platform-icon"> Xbox</button>
+                        <button class="filter-btn" data-platform="switch"><img src="images/nintendologo.webp" alt="Switch" class="platform-icon"> Switch</button>
+                        <button class="filter-btn" data-platform="pc"><img src="images/pclogo.webp" alt="PC" class="platform-icon"> PC</button>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>Genre</h3>
+                    <div class="genre-filter">
+                        <button class="filter-btn active" data-genre="all">All</button>
+                        <button class="filter-btn" data-genre="action">Action</button>
+                        <button class="filter-btn" data-genre="adventure">Adventure</button>
+                        <button class="filter-btn" data-genre="rpg">RPG</button>
+                        <button class="filter-btn" data-genre="fps">FPS</button>
+                        <button class="filter-btn" data-genre="sports">Sports</button>
+                        <button class="filter-btn" data-genre="racing">Racing</button>
+                        <button class="filter-btn" data-genre="strategy">Strategy</button>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>Price Range</h3>
+                    <input type="range" min="0" max="100" value="100" class="price-range" id="priceRange">
+                    <div class="price-values">
+                        <span>£0</span>
+                        <span>£100+</span>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Games Grid -->
+            <section class="products-grid">
+                <!-- Game 1 -->
+                <div class="game-card" data-platform="ps5" data-genre="action" data-price="59.99">
+                    <span class="game-badge">New Release</span>
+                    <img src="images/Spider.webp" alt="Spider-Man 2" class="game-img">
+                    <div class="game-info">
+                        <h3 class="game-title">Spider-Man 2</h3>
+                        <div class="game-platforms">
+                            <img src="images/pslogo.webp" alt="PS5" class="platform-icon">
+                        </div>
+                        <div class="game-price">
+                            <span class="current-price">£59.99</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Game 2 -->
+                <div class="game-card" data-platform="xbox" data-genre="rpg" data-price="49.99">
+                    <span class="game-badge">Best Seller</span>
+                    <img src="images/dark.webp" alt="The Dark Ages" class="game-img">
+                    <div class="game-info">
+                        <h3 class="game-title">The Dark Ages Premium Edition - Xbox Series X</h3>
+                        <div class="game-platforms">
+                            <img src="images/xboxlogo.png" alt="Xbox" class="platform-icon">
+                            <img src="images/pclogo.webp" alt="PC" class="platform-icon">
+                        </div>
+                        <div class="game-price">
+                            <span class="current-price">£49.99</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Game 3 -->
+                <div class="game-card" data-platform="switch" data-genre="adventure" data-price="39.99">
+                    <img src="images/zeda.webp" alt="The Legend of Zelda: Tears of the Kingdom" class="game-img">
+                    <div class="game-info">
+                        <h3 class="game-title">Zelda: Tears of the Kingdom</h3>
+                        <div class="game-platforms">
+                            <img src="images/nintendologo.webp" alt="Switch" class="platform-icon">
+                        </div>
+                        <div class="game-price">
+                            <span class="current-price">£39.99</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Game 4 -->
+                <div class="game-card" data-platform="ps5,xbox,pc" data-genre="fps" data-price="54.99">
+                    <span class="game-badge">Pre-order</span>
+                    <img src="images/callofduty.webp" alt="Call of Duty: Modern Warfare III" class="game-img">
+                    <div class="game-info">
+                        <h3 class="game-title">Call of Duty: MW III</h3>
+                        <div class="game-platforms">
+                            <img src="images/pslogo.webp" alt="PS5" class="platform-icon">
+                            <img src="images/xboxlogo.png" alt="Xbox" class="platform-icon">
+                            <img src="images/pclogo.webp" alt="PC" class="platform-icon">
+                        </div>
+                        <div class="game-price">
+                            <span class="current-price">£54.99</span>
+                        </div>
+                        <button class="add-to-cart">Pre-order</button>
+                    </div>
+                </div>
+                
+                <!-- Game 5 -->
+                <div class="game-card" data-platform="ps5,xbox,pc" data-genre="sports" data-price="49.99">
+                    <img src="images/f1.webp" alt="EA Sports F1 24 - PS5" class="game-img">
+                    <div class="game-info">
+                        <h3 class="game-title">EA Sports F1 24 - PS5</h3>
+                        <div class="game-platforms">
+                            <img src="images/pslogo.webp" alt="PS5" class="platform-icon">
+                            <img src="images/xboxlogo.png" alt="Xbox" class="platform-icon">
+                            <img src="images/pclogo.webp" alt="PC" class="platform-icon">
+                        </div>
+                        <div class="game-price">
+                            <span class="current-price">£49.99</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Game 6 -->
+                <div class="game-card" data-platform="switch" data-genre="adventure" data-price="29.99">
+                    <span class="game-badge">Sale</span>
+                    <img src="images/supermario.webp" alt="Super Mario Odyssey" class="game-img">
+                    <div class="game-info">
+                        <h3 class="game-title">Super Mario Odyssey</h3>
+                        <div class="game-platforms">
+                            <img src="images/nintendologo.webp" alt="Switch" class="platform-icon">
+                        </div>
+                        <div class="game-price">
+                            <span class="current-price">£29.99</span>
+                            <span class="original-price">£49.99</span>
+                            <span class="discount">40% off</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Game 7 -->
+                <div class="game-card" data-platform="pc" data-genre="strategy" data-price="34.99">
+                    <img src="images/civilization.webp" alt="Sid Meiers Civilization VII" class="game-img">
+                    <div class="game-info">
+                        <h3 class="game-title">Sid Meier’s Civilization VII</h3>
+                        <div class="game-platforms">
+                            <img src="images/pclogo.webp" alt="PC" class="platform-icon">
+                        </div>
+                        <div class="game-price">
+                            <span class="current-price">£34.99</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Game 8 -->
+                <div class="game-card" data-platform="ps5,xbox,pc" data-genre="racing" data-price="59.99">
+                    <img src="images/forza.webp" alt="Forza Motorsport" class="game-img">
+                    <div class="game-info">
+                        <h3 class="game-title">Forza Motorsport</h3>
+                        <div class="game-platforms">
+                            <img src="images/xboxlogo.png" alt="Xbox" class="platform-icon">
+                            <img src="images/pclogo.webp" alt="PC" class="platform-icon">
+                        </div>
+                        <div class="game-price">
+                            <span class="current-price">£59.99</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="newsletter-content">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest gaming news and exclusive offers.</p>
+                <form class="newsletter-form">
+                    <label for="newsletter-email" class="sr-only">Email Address</label>
+                    <input type="email" id="newsletter-email" name="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+   <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column footer-logo">
+                <img src="images/logo.png" alt="Logo">
+                <p>Your premier destination for gaming gear, consoles, and accessories.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4 class="footer-heading">Shop</h4>
+                <ul class="footer-links">
+                    <li><a href="games.html">All Games</a></li>
+                    <li><a href="accessories.html">Accessories</a></li>
+                    <li><a href="consoles.html">Gaming Consoles</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4 class="footer-heading">Contact Info</h4>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Gaming Street, Brighton</li>
+                    <li><i class="fas fa-phone-alt"></i> (+44) 021-7890</li>
+                    <li><i class="fas fa-envelope"></i> support@mcgaming.com</li>
+                    <li><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> McHenry Gaming Store. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#top" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

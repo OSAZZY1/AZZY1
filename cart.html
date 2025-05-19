@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McHenry Gaming Store | Your Cart</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="cart-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="logo-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo.png" alt="Logo" class="logo-img">
+            </a>
+            <div class="store-name">MCHENRY GAMING STORE</div>
+        </div>
+        
+        <div class="nav-center">
+            <div class="search-container">
+                <input type="text" placeholder="Search home..." id="search-input">
+                <button type="button" id="search-button" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            
+            <ul class="nav-links" id="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+                <li><a href="consoles.html">Consoles</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+        
+        <div class="nav-actions">
+            <a href="cart.html" class="cart" aria-label="Shopping cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Cart Section -->
+    <main class="cart-container">
+        <div class="cart-header">
+            <h1>Your Shopping Cart</h1>
+            <div class="cart-steps">
+                <div class="step active">
+                    <span class="step-number">1</span>
+                    <span class="step-text">Shopping Cart</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <span class="step-text">Checkout</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <span class="step-text">Order Complete</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-content">
+            <div class="cart-items">
+                <div class="cart-table-header">
+                    <div class="header-product">Product</div>
+                    <div class="header-price">Price</div>
+                    <div class="header-quantity">Quantity</div>
+                    <div class="header-subtotal">Subtotal</div>
+                    <div class="header-remove"></div>
+                </div>
+
+                <div class="cart-item">
+                    <div class="item-product">
+                        <img src="images/PS5.webp" alt="PlayStation 5 Console" class="item-image">
+                        <div class="item-details">
+                            <h3>PlayStation 5 Console</h3>
+                            <p class="item-sku">SKU: PS5-DISC-001</p>
+                            <div class="item-availability in-stock">
+                                <i class="fas fa-check-circle"></i> In Stock
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-price">£499.99</div>
+                    <div class="item-quantity">
+                        <button class="quantity-btn minus" aria-label="Decrease quantity">-</button>
+                        <input type="number" value="1" min="1" max="10" class="quantity-input">
+                        <button class="quantity-btn plus" aria-label="Increase quantity">+</button>
+                    </div>
+                    <div class="item-subtotal">£499.99</div>
+                    <div class="item-remove">
+                        <button class="remove-btn" aria-label="Remove item">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="cart-item">
+                    <div class="item-product">
+                        <img src="images/elden-ring.webp" alt="Elden Ring Game" class="item-image">
+                        <div class="item-details">
+                            <h3>Elden Ring (PS5)</h3>
+                            <p class="item-sku">SKU: ELDEN-PS5-001</p>
+                            <div class="item-availability in-stock">
+                                <i class="fas fa-check-circle"></i> In Stock
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-price">£49.99</div>
+                    <div class="item-quantity">
+                        <button class="quantity-btn minus" aria-label="Decrease quantity">-</button>
+                        <input type="number" value="2" min="1" max="10" class="quantity-input">
+                        <button class="quantity-btn plus" aria-label="Increase quantity">+</button>
+                    </div>
+                    <div class="item-subtotal">£99.98</div>
+                    <div class="item-remove">
+                        <button class="remove-btn" aria-label="Remove item">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="cart-item">
+                    <div class="item-product">
+                        <img src="images/dualsense.webp" alt="DualSense Controller" class="item-image">
+                        <div class="item-details">
+                            <h3>DualSense Wireless Controller</h3>
+                            <p class="item-sku">SKU: DS-WHITE-001</p>
+                            <div class="item-availability low-stock">
+                                <i class="fas fa-exclamation-circle"></i> Only 2 left
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-price">£59.99</div>
+                    <div class="item-quantity">
+                        <button class="quantity-btn minus" aria-label="Decrease quantity">-</button>
+                        <input type="number" value="1" min="1" max="2" class="quantity-input">
+                        <button class="quantity-btn plus" aria-label="Increase quantity">+</button>
+                    </div>
+                    <div class="item-subtotal">£59.99</div>
+                    <div class="item-remove">
+                        <button class="remove-btn" aria-label="Remove item">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="cart-actions">
+                    <button class="btn-continue">
+                        <i class="fas fa-arrow-left"></i> Continue Shopping
+                    </button>
+                    <button class="btn-update">
+                        <i class="fas fa-sync-alt"></i> Update Cart
+                    </button>
+                    <button class="btn-clear">
+                        <i class="fas fa-trash"></i> Clear Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="cart-summary">
+                <div class="summary-card">
+                    <h3>Order Summary</h3>
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span>£659.96</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span class="free-shipping">Free</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Tax</span>
+                        <span>£131.99</span>
+                    </div>
+                    <div class="summary-row discount">
+                        <span>Discount (MCHENRY10)</span>
+                        <span>-£65.99</span>
+                    </div>
+                    <div class="summary-divider"></div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span>£725.96</span>
+                    </div>
+
+                    <div class="coupon-form">
+                        <label for="coupon-code">Have a coupon?</label>
+                        <div class="coupon-input">
+                            <input type="text" id="coupon-code" placeholder="Enter coupon code">
+                            <button class="btn-apply">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="shipping-methods">
+                        <h4>Shipping Method</h4>
+                        <div class="method-option">
+                            <input type="radio" id="standard-shipping" name="shipping" checked>
+                            <label for="standard-shipping">
+                                <span class="method-name">Standard Shipping</span>
+                                <span class="method-details">3-5 business days</span>
+                                <span class="method-price">Free</span>
+                            </label>
+                        </div>
+                        <div class="method-option">
+                            <input type="radio" id="express-shipping" name="shipping">
+                            <label for="express-shipping">
+                                <span class="method-name">Express Shipping</span>
+                                <span class="method-details">1-2 business days</span>
+                                <span class="method-price">£9.99</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="btn-checkout">
+                        Proceed to Checkout <i class="fas fa-arrow-right"></i>
+                    </button>
+
+                    <div class="secure-checkout">
+                        <i class="fas fa-lock"></i>
+                        <span>Secure checkout</span>
+                        <div class="payment-methods">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="customer-support">
+                    <h4>Need Help?</h4>
+                    <p>Our customer service team is available to assist you with any questions.</p>
+                    <div class="support-contact">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>(+44) 021-7890</span>
+                    </div>
+                    <div class="support-contact">
+                        <i class="fas fa-envelope"></i>
+                        <span>support@mcgaming.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="frequently-bought">
+            <h2>Frequently Bought Together</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="images/hdmi.webp" alt="HDMI Cable">
+                    <h3>Premium HDMI Cable</h3>
+                    <p class="price">£12.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="images/wirelessgamingheadset.webp" alt="Gaming Headset">
+                    <h3>Wireless Gaming Headset</h3>
+                    <p class="price">£89.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="images/charger.webp" alt="Charger">
+                    <h3>NOG 65 W Charger Dock</h3>
+                    <p class="price">£24.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+   <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column footer-logo">
+                <img src="images/logo.png" alt="Logo">
+                <p>Your premier destination for gaming gear, consoles, and accessories.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4 class="footer-heading">Shop</h4>
+                <ul class="footer-links">
+                    <li><a href="games.html">All Games</a></li>
+                    <li><a href="accessories.html">Accessories</a></li>
+                    <li><a href="consoles.html">Gaming Consoles</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4 class="footer-heading">Contact Info</h4>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Gaming Street, Brighton</li>
+                    <li><i class="fas fa-phone-alt"></i> (+44) 021-7890</li>
+                    <li><i class="fas fa-envelope"></i> support@mcgaming.com</li>
+                    <li><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> McHenry Gaming Store. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#top" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
